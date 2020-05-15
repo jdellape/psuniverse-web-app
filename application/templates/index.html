@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PSUniverse</title>
+</head>
+<body>
+<h1>Find Penn State Players by High School</h1>
+    <form name="searchform" id="searchform" action="{{url_for('getplayers')}}" method="POST">
+        <label>Enter keyword for high school:</label>
+        <input type="text" name="school"/>
+        <input type="submit" value="Submit"/>
+        <table>
+            <tr>
+                <th>High School</th>
+                <th>Player Name</th>
+                <th>Years on Roster</th>
+                <th>Home City</th>
+                <th>Home State</th>
+            </tr>
+            {% for result in results %}
+            <tr>
+                <td>{{result[0]}}</td>
+                <td>{{result[1]}}</td>
+                <td>{{result[2]}}</td>
+                <td>{{result[3]}}</td>
+                <td>{{result[4]}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </form>
+</body>
+</html>
