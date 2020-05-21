@@ -1,0 +1,16 @@
+table {
+    border: 1px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.top-container {
+    background: #ccc;
+    padding:5px;
+    border-bottom:2px solid #0f0f0f;
+}
+
